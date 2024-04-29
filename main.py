@@ -41,6 +41,10 @@ def test_instance(data):
         return "The sample is sign language!"
     return "The sample is not sign language"
 
+@app.route('/')
+def index():
+  return render_template('index.html')
+
 @app.route('/predict', methods=['GET'])
 def predict():
     try:
