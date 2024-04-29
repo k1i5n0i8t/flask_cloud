@@ -5,7 +5,7 @@ import pickle
 app = Flask(__name__)
 
 # Load your model
-with open(r'C:\Users\Kinit\Downloads\Projects\z j comp\hand 2.0\cloud\model_saced', 'rb') as file:
+with open('model_saced.pkl', 'rb') as file:
     model_loaded = pickle.load(file)
 
 def sum_str(lst):
@@ -45,7 +45,7 @@ def test_instance(data):
 def predict():
     try:
         # Hardcoded Excel file path
-        excel_file_path = r'C:\Users\Kinit\Downloads\Copy of Raw_test_file_sign.xlsx'
+        excel_file_path = 'Copy of Raw_test_file_sign.xlsx'
 
         # Read Excel file
         data = pd.read_excel(excel_file_path)
